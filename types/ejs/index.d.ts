@@ -55,6 +55,10 @@ export function renderFile<T>(path: string, cb: RenderFileCallback<T>): T;
 export function renderFile<T>(path: string, data: Data, cb: RenderFileCallback<T>): T;
 export function renderFile<T>(path: string, data: Data, opts: Options, cb: RenderFileCallback<T>): T;
 
+export function renderFile<T>(path: string): Promise<string>;
+export function renderFile<T>(path: string, data: Data): Promise<string>;
+export function renderFile<T>(path: string, data: Data, opts: Options): Promise<string>;
+
 /**
  * Clear intermediate JavaScript cache. Calls {@link Cache#reset}.
  */
